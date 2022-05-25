@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDPMincho&display=swap');
+
+:root {
+    --baseitblue: rgb(56, 151, 200);
+    --baseitbackground: rgb(200,206,213);
+    --yellow: rgb(251, 251, 114);
+    --lightyellow: rgb(244, 244, 158);
+    --darkestblue: rgb(11, 31, 69);
+    --darkblue: rgb(0, 57, 162);
+    --white: rgb(255, 255, 255);
+    --black: rgb(0, 0, 0);
+    --fontfamily-BIZ: 'BIZ UDPMincho', serif;
+    --blue-shadow: 0 0 12px 5px rgba(56, 151, 200, 0.8);
+    --black-shadow: 0 0 6px #000;
+}
+
+html {
+    background-color: var(--baseitbackground);
+    font-family: var(--fontfamily-BIZ);
+}
+
+/*    BASEIT LOGO HEADER    */
+
+#baseitLogo {
+    display: flex;
+    margin: 0 auto;
+    width: min(100% - 4rem, 350px);
+    padding-bottom: 5px;
+}
+
+#logoWrapper {
+    border: 3px solid var(--baseitblue);
+    background-color: var(--white);
+    border-bottom-left-radius: 1.5rem;
+    border-bottom-right-radius: 1.5rem;
+    width: 95%;
+    margin-inline: auto;
+}
+
+
+
+/*    MENU BAR    */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--fontfamily-BIZ);
+}
+
+html,
+body {
+    /* display: grid; */
+    height: 100%;
+    place-items: center;
+    text-align: center;
+}
+
+.menu-wrapper-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+}
+
+.menu-wrapper {
+    height: 60px;
+    width: 55vw;
+    background: #fff;
+    line-height: 60px;
+    border-radius: 50px;
+    box-shadow: 0 0 12px 2px var(--baseitblue);
+}
+
+.menu-wrapper nav {
+    position: relative;
+    display: flex;
+}
+
+.menu-wrapper nav label {
+    flex: 1;
+    width: 100%;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.menu-wrapper nav label a {
+    position: relative;
+    z-index: -1;
+    color: var(--black);
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: color 0.6s ease;
+}
+
+.menu-wrapper nav #home:checked~label.home a,
+.menu-wrapper nav #services:checked~label.services a,
+.menu-wrapper nav #reviews:checked~label.reviews a,
+.menu-wrapper nav #projects:checked~label.projects a,
+.menu-wrapper nav #contact:checked~label.contact a {
+    color: #fff;
+}
+
+.menu-wrapper nav label a i {
+    font-size: 25px;
+    margin: 0 7px;
+}
+
+.menu-wrapper nav .tab {
+    position: absolute;
+    height: 100%;
+    width: 20%;
+    left: 0;
+    bottom: 0;
+    z-index: 0;
+    border-radius: 50px;
+    background: linear-gradient(45deg, var(--baseitblue) 0%, rgb(56, 151, 200) 100%);
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.menu-wrapper nav #services:checked~.tab {
+    left: 20%;
+}
+
+.menu-wrapper nav #reviews:checked~.tab {
+    left: 40%;
+}
+
+.menu-wrapper nav #projects:checked~.tab {
+    left: 60%;
+}
+
+.menu-wrapper nav #contact:checked~.tab {
+    left: 80%;
+}
+
+.menu-wrapper nav input {
+    display: none;
+}
