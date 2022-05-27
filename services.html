@@ -12,7 +12,29 @@
     <script src="assets/js/script.js"></script>
     <title>Baseit Electrical</title>
 </head>
-
+<header id="header">
+    <div id="logoWrapper">
+        <img src="../Baseit/images/BaseitLogo.png" alt="Baseit Logo" id="baseitLogo">
+    </div>
+    <!-- <button id="toggleMenu" class="toggle-menu">MENU</button> -->
+</header>
+<div class="menu-wrapper-wrapper">
+<div class="menu-wrapper">
+    <nav>
+        <input type="radio" name="tab" id="home">
+        <input type="radio" name="tab" id="services" checked>
+        <input type="radio" name="tab" id="reviews">
+        <input type="radio" name="tab" id="projects">
+        <input type="radio" name="tab" id="contact">
+        <label for="home" class="menuItem home"><a href="#"><i class="fas fa-home"></i>Home</a></label>
+        <label for="services" class="menuItem services"><a href="#"><i class="far fa-lightbulb"></i>services</a></label>
+        <label for="reviews" class="menuItem reviews"><a href="#"><i class="far fa-star"></i>reviews</a></label>
+        <label for="projects" class="menuItem projects"><a href="#"><i class="far fa-folder-open"></i>projects</a></label>
+        <label for="contact" class="menuItem contact"><a href="#"><i class="far fa-user"></i>contact</a></label>
+        <div class="tab"></div>
+    </nav>
+</div>
+</div>
 <body>
     <header id="header">
         <div id="logoWrapper">
