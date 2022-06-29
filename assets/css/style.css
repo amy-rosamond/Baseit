@@ -2,7 +2,7 @@
 
 :root {
     --baseitblue: rgb(56, 151, 200);
-    --baseitbackground: rgb(200,206,213);
+    --baseitbackground: rgb(200, 206, 213);
     --yellow: rgb(251, 251, 114);
     --lightyellow: rgb(244, 244, 158);
     --darkestblue: rgb(11, 31, 69);
@@ -19,7 +19,7 @@ html {
     font-family: var(--fontfamily-BIZ);
 }
 
-/*    BASEIT LOGO HEADER    */
+/*    BASEIT LOGO HEADER BAR    */
 
 #baseitLogo {
     display: flex;
@@ -28,7 +28,7 @@ html {
     padding-bottom: 5px;
 }
 
-#logoWrapper {
+#headerWrapper {
     border: 3px solid var(--baseitblue);
     background-color: var(--white);
     border-bottom-left-radius: 1.5rem;
@@ -37,11 +37,65 @@ html {
     margin-inline: auto;
 }
 
+.header-wrapper-two {
+    display: flex;
+}
+
+.opening-hours-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: min(100% - 4rem, 350px);
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 50px;
+}
+
+.opening-hours-today,
+.opening-hours-link {
+    letter-spacing: 0.5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.opening-hours-today {
+    line-height: 25px;
+}
+
+.opening-hours-link {
+    color: var(--baseitblue);
+}
+
+#clockIcon {
+    width: 50px;
+    height: auto;
+    margin: 6px 6px 0 0;
+}
+
+.social-media-wrapper {
+    display: flex;
+    width: min(100% - 4rem, 350px);
+    align-items: center;
+    justify-content: center;
+}
+
+.social-media-svgs {
+    margin: 1rem;
+}
+
+#instagramLogo {
+    width: 45px;
+}
+
+#facebookLogo {
+    width: 50px;
+}
+
 
 
 /*    MENU BAR    */
 
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -50,7 +104,6 @@ html {
 
 html,
 body {
-    /* display: grid; */
     height: 100%;
     place-items: center;
     text-align: center;
@@ -64,7 +117,7 @@ body {
 
 .menu-wrapper {
     height: 60px;
-    width: 55vw;
+    width: min(100% - 5rem, 800px);
     background: #fff;
     line-height: 60px;
     border-radius: 50px;
@@ -137,4 +190,19 @@ body {
 
 .menu-wrapper nav input {
     display: none;
-}
+} */
+
+
+
+
+
+/*          MEDIA QUERIES           */
+
+
+/*    MENU BAR    */
+
+/* @media only screen and (max-width: 820px) {
+    .menu-wrapper nav label a {
+        font-size: 18px;
+    }  
+} */
