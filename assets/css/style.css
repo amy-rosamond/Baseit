@@ -10,11 +10,12 @@
     --white: rgb(255, 255, 255);
     --black: rgb(0, 0, 0);
     --fontfamily-BIZ: 'BIZ UDPMincho', serif;
-    --blue-shadow: 0 0 12px 5px rgba(56, 151, 200, 0.8);
-    --black-shadow: 0 0 6px #000;
 }
 
-html {
+html,
+header,
+body,
+footer {
     background-color: var(--background);
     font-family: var(--fontfamily-BIZ);
 }
@@ -104,7 +105,7 @@ html {
 
 .outer-menu-wrapper {
     justify-content: center;
-    margin: 1rem;
+    margin: 1rem 1rem 0 1rem;
 }
 
 .menu-wrapper {
@@ -120,7 +121,6 @@ html {
 
 .menu-icons {
     position: relative;
-    bottom: 2px;
     width: 28px;
 }
 
@@ -138,12 +138,93 @@ html {
 
 .menu-item:hover {
     transition: all .3s ease-in-out;
-    background: rgba(200, 206, 213,0.5);
+    background: rgba(200, 206, 213, 0.5);
 }
 
 .menu-item[aria-current="page"] {
-    background: rgba(56, 151, 200,0.4);
+    background: rgba(56, 151, 200, 0.4);
 }
+
+
+
+/*    CONTACT PAGE    */
+
+#contactTitleWrapper,
+.contact-form-wrapper,
+#submitButton {
+    display: flex;
+}
+
+.contact-form-wrapper {
+    justify-content: end;
+}
+
+#contactTitleWrapper {
+    justify-content: center;
+}
+
+#contactTitle {
+    text-transform: uppercase;
+    text-shadow: 0 0 5px var(--baseitblue);
+}
+
+.contact-form {
+    background: var(--white);
+    border-radius: 1rem;
+    box-shadow: 0 0 12px;
+    padding: 0.3rem;
+    border: 2px solid var(--baseitblue);
+    margin-right: 4rem;
+    margin-top: 1rem;
+}
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.information {
+    margin: 1rem 1rem 0.5rem 1rem;
+    margin: 1rem 1rem 0.5rem 1rem;
+    text-align: center;
+    line-height: 35px;
+    height: 35px;
+    display: inline-block;
+}
+
+.contact-labels {
+    padding-right: 2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+}
+
+.form-input {
+    float: right;
+    width: 350px;
+    border: 1px solid var(--baseitblue);
+    border-radius: 0.2rem;
+    box-shadow: 0 0 5px var(--baseitblue);
+    padding: 0.5rem;
+}
+
+#submitButton {
+    border: 2px solid var(--baseitblue);
+    width: 200px;
+    margin: 2rem auto;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
 
 
 
@@ -179,6 +260,7 @@ html {
 }
 
 @media only screen and (max-width: 1022px) {
+
     .opening-hours-wrapper,
     .social-media-wrapper {
         display: none;
@@ -209,4 +291,76 @@ html {
         bottom: 4px;
         width: 24px;
     }
+}
+
+
+/*    MINI MENU BAR    */
+
+@media only screen and (min-width: 900px) {
+
+    #toggleMenu,
+    .mini-menu-wrapper {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .outer-menu-wrapper {
+        display: none;
+    }
+
+    #miniMenuBar,
+    #miniMenuBarList,
+    .mini-menu-wrapper {
+        display: flex;
+    }
+
+    .mini-menu-wrapper {
+        justify-content: center;
+        margin: 1rem;
+    }
+
+    .toggle-menu {
+        padding: 0.5rem 6rem;
+        font-size: 1.1rem;
+        font-family: var(--fontfamily-BIZ);
+        font-weight: bold;
+        background: var(--white);
+        border: 2px solid var(--baseitblue);
+        border-radius: 0.8rem;
+        position: absolute;
+    }
+
+    .rotated {
+        transform: rotate(90deg);
+    }
+
+    md-icon {
+        display: inline-block;
+        transition: all 1s;
+        position: absolute;
+        left: 30px;
+        bottom: 5px;
+        filter: drop-shadow(0px 0px 2px var(--baseitblue));
+    }
+
+    #miniMenuBarList {
+        flex-direction: column;
+        position: relative;
+        top: 50px;
+    }
+
+    .mini-menu-links {
+        display: flex;
+        justify-content: center;
+        padding: 0.3rem 3rem;
+        background: var(--white);
+        margin: 2px;
+        border: 2px solid var(--baseitblue);
+        border-radius: 0.6rem;
+        color: black;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
 }
