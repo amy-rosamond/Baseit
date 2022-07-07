@@ -2,7 +2,7 @@
 
 :root {
     --baseitblue: rgb(56, 151, 200);
-    --background: rgb(200, 206, 213);
+    --background: rgb(229, 232, 236);
     --yellow: rgb(251, 251, 114);
     --lightyellow: rgb(244, 244, 158);
     --darkestblue: rgb(11, 31, 69);
@@ -120,8 +120,10 @@ footer {
 }
 
 .menu-icons {
-    position: relative;
     width: 28px;
+    color: var(--baseitblue);
+    font-size: 27px;
+    text-shadow: none;
 }
 
 .menu-item {
@@ -134,6 +136,7 @@ footer {
     font-size: 1.2rem;
     color: var(--black);
     text-shadow: 0 0 1px var(--black);
+    align-items: center;
 }
 
 .menu-item:hover {
@@ -151,13 +154,16 @@ footer {
 
 #contactTitleWrapper,
 .contact-form-wrapper,
-#submitButton {
+#submitButton,
+#contactForm,
+.send-button-wrapper,
+#envelope,
+.outer-contact-message-wrapper,
+.contact-page-body-wrapper {
     display: flex;
 }
 
-.contact-form-wrapper {
-    justify-content: end;
-}
+
 
 #contactTitleWrapper {
     justify-content: center;
@@ -168,23 +174,48 @@ footer {
     text-shadow: 0 0 5px var(--baseitblue);
 }
 
+.contact-page-body-wrapper {
+    flex-wrap: wrap;
+}
+
+.outer-contact-message-wrapper {
+    justify-content: center;
+    width: 800px;
+    height: 300px;
+}
+
+.contact-message-wrapper {
+    font-size: 1.4rem;
+    text-align: center;
+    line-height: 2rem;
+    height: 300px;
+}
+
+.baseitElectrical {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--baseitblue);
+}
+
+#envelope {
+    justify-content: center;
+    font-size: 3rem;
+    color: var(--baseitblue);
+}
+
 .contact-form {
     background: var(--white);
     border-radius: 1rem;
     box-shadow: 0 0 12px;
     padding: 0.3rem;
     border: 2px solid var(--baseitblue);
-    margin-right: 4rem;
-    margin-top: 1rem;
 }
 
 #contactForm {
-    display: flex;
     flex-direction: column;
 }
 
 .information {
-    margin: 1rem 1rem 0.5rem 1rem;
     margin: 1rem 1rem 0.5rem 1rem;
     text-align: center;
     line-height: 35px;
@@ -201,17 +232,70 @@ footer {
 
 .form-input {
     float: right;
-    width: 350px;
+    width: 300px;
     border: 1px solid var(--baseitblue);
     border-radius: 0.2rem;
     box-shadow: 0 0 5px var(--baseitblue);
     padding: 0.5rem;
+    background: rgba(200, 206, 213, 0.2);
+    text-align: center;
+    transition: all .3s ease-in-out;
+    font-family: var(--fontfamily-BIZ);
+}
+
+.form-input:focus {
+    outline: none;
+    box-shadow: 0 0 5px var(--lightyellow);
+    border: 1px solid var(--lightyellow);
+}
+
+.message {
+    height: 150px;
+}
+
+#uploadLabel {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    color: var(--baseitblue);
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    margin: 0 auto;
+    font-weight: 900;
+    font-size: 1.2rem;
+    border: 2px solid var(--baseitblue);
+    transition: all .3s ease-in-out;
+    box-shadow: 0 0 12px var(--baseitblue);
+}
+
+#uploadLabel:hover {
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0 0 12px var(--lightyellow);
+    background: var(--baseitblue);
+    color: var(--white);
+    text-shadow: 0 0 12px var(--black);
+}
+
+
+#cloudUploadIcon {
+    font-size: 1.8rem;
+}
+
+.upload-none {
+    display: none;
+}
+
+.send-button-wrapper {
+    justify-content: end;
 }
 
 #submitButton {
     border: 2px solid var(--baseitblue);
     width: 200px;
-    margin: 2rem auto;
+    margin: 3rem 1rem;
     border-radius: 0.5rem;
     padding: 0.5rem;
     font-size: 1.2rem;
@@ -220,9 +304,63 @@ footer {
     text-transform: uppercase;
     justify-content: center;
     align-items: center;
+    background: rgba(56, 151, 200, 0.5);
+    color: white;
+    text-shadow: 0 0 4px var(--black);
+    transition: all .3s ease-in-out;
 }
 
+.bx-mail-send {
+    font-size: 1.4rem;
+}
 
+#submitButton:hover {
+    background: none;
+    text-shadow: none;
+    color: var(--baseitblue);
+    box-shadow: 0 0 12px var(--baseitblue);
+    transition: all .3s ease-in-out;
+}
+
+.contact-box-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.contact-box {
+    background: var(--white);
+    margin: 1rem;
+    padding: 1rem;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 220px;
+    height: 200px;
+    box-shadow: 0 0 12px var(--black);
+    border-radius: 1rem;
+}
+
+.contact-icon {
+    color: var(--baseitblue);
+    font-size: 4rem;
+}
+
+.contact-info {
+    font-size: 1rem;
+    position: relative;
+    bottom: 10px;
+}
+
+.box-button {
+    background: var(--baseitblue);
+    border-radius: 0.2rem;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--black);
+    color: var(--white);
+}
 
 
 
