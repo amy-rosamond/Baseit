@@ -163,7 +163,20 @@ footer {
     display: flex;
 }
 
+.contact-page-body-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 200px;
+    grid-auto-columns: 400px;
+    grid-template-rows: repeat(3, 1fr);
+    margin-top: 1rem;
+}
 
+.outer-contact-message-wrapper,
+.contact-form-wrapper,
+.contact-box-wrapper {
+    margin: 2rem;
+}
 
 #contactTitleWrapper {
     justify-content: center;
@@ -174,27 +187,72 @@ footer {
     text-shadow: 0 0 5px var(--baseitblue);
 }
 
-.contact-page-body-wrapper {
-    flex-wrap: wrap;
-}
-
 .outer-contact-message-wrapper {
     justify-content: center;
-    width: 800px;
     height: 300px;
+    display: grid;
 }
 
 .contact-message-wrapper {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     text-align: center;
     line-height: 2rem;
     height: 300px;
+    width: 900px;
 }
 
 .baseitElectrical {
     font-size: 1.5rem;
     font-weight: 900;
     color: var(--baseitblue);
+}
+
+.open-hours-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.opening-hours-box {
+    background: var(--white);
+    width: 290px;
+    padding: 0.4rem;
+}
+
+.opening-hours-box-wrapper {
+    filter: drop-shadow(-1px 6px 3px rgb(41, 109, 143));
+}
+
+#opening-hours-box-1 {
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+}
+
+#opening-hours-box-2 {
+    clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+    -webkit-clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+}
+
+#opening-hours-box-3 {
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
+    -webkit-clip-path: (10% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.opening-days,
+.opening-times {
+    font-weight: bold;
+}
+
+.opening-days {
+    text-shadow: 1px 1px 2px var(--baseitblue);
+    color: var(--baseitblue);
+}
+
+.contact-form-wrapper {
+    display: grid;
+    grid-row: 1 / 3;
+    grid-column-start: 2;
+    width: 600px;
+    align-content: center;
 }
 
 #envelope {
@@ -224,7 +282,6 @@ footer {
 }
 
 .contact-labels {
-    padding-right: 2rem;
     font-weight: bold;
     letter-spacing: 1px;
     font-size: 1.1rem;
@@ -233,20 +290,20 @@ footer {
 .form-input {
     float: right;
     width: 300px;
-    border: 1px solid var(--baseitblue);
     border-radius: 0.2rem;
-    box-shadow: 0 0 5px var(--baseitblue);
+    box-shadow: 0 0 6px 2px var(--baseitblue);
     padding: 0.5rem;
     background: rgba(200, 206, 213, 0.2);
     text-align: center;
     transition: all .3s ease-in-out;
     font-family: var(--fontfamily-BIZ);
+    border: none;
 }
 
 .form-input:focus {
     outline: none;
-    box-shadow: 0 0 5px var(--lightyellow);
-    border: 1px solid var(--lightyellow);
+    box-shadow: 0 0 6px 2px var(--black);
+    transition: all .3s ease-in-out;
 }
 
 .message {
@@ -325,6 +382,7 @@ footer {
 .contact-box-wrapper {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    height: 200px;
 }
 
 .contact-box {
@@ -360,9 +418,13 @@ footer {
     padding: 0.5rem 1rem;
     border: 2px solid var(--black);
     color: var(--white);
+    transition: all .3s ease-in-out;
 }
 
-
+.box-button:hover {
+    border-radius: 1rem;
+    transition: all .3s ease-in-out;
+}
 
 
 
