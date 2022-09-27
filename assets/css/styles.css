@@ -1,0 +1,516 @@
+@import url("https://fonts.googleapis.com/css2?family=BIZ+UDPMincho&display=swap");
+:root {
+  --baseitblue: rgb(56, 151, 200);
+  --background: rgb(229, 232, 236);
+  --yellow: rgb(251, 251, 114);
+  --lightyellow: rgb(244, 244, 158);
+  --darkestblue: rgb(11, 31, 69);
+  --darkblue: rgb(0, 57, 162);
+  --white: rgb(255, 255, 255);
+  --black: rgb(0, 0, 0);
+  --fontfamily-BIZ: "BIZ UDPMincho", serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+header,
+body,
+footer {
+  background-color: var(--background);
+  font-family: var(--fontfamily-BIZ);
+}
+
+/*    BASEIT LOGO HEADER BAR    */
+#baseitLogo,
+.header-wrapper,
+.opening-hours-wrapper,
+.social-media-wrapper {
+  display: flex;
+}
+
+#baseitLogo {
+  margin: 0 auto;
+  width: min(100% - 4rem, 350px);
+  padding-bottom: 5px;
+}
+
+.outer-header-wrapper {
+  border: 3px solid var(--baseitblue);
+  background-color: var(--white);
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  width: 85%;
+  margin-inline: auto;
+}
+
+.opening-hours-wrapper {
+  flex-direction: row;
+  width: min(100% - 4rem, 350px);
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: 50px;
+}
+.opening-hours-today, .opening-hours-link {
+  letter-spacing: 0.5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.opening-hours-today {
+  line-height: 25px;
+}
+.opening-hours-link {
+  color: var(--baseitblue);
+}
+
+#clockIcon {
+  width: 50px;
+  height: auto;
+  margin: 6px 6px 0 0;
+}
+
+.social-media-wrapper {
+  width: min(100% - 4rem, 350px);
+  align-items: center;
+  justify-content: center;
+}
+.social-media-svgs {
+  margin: 1rem;
+}
+
+#instagramLogo {
+  width: 45px;
+}
+
+#facebookLogo {
+  width: 50px;
+}
+
+/*    MENU BAR    */
+.outer-menu-wrapper,
+.menu-wrapper,
+#menuBar,
+.menu-item {
+  display: flex;
+}
+
+.outer-menu-wrapper {
+  justify-content: center;
+  margin: 1rem 1rem 0 1rem;
+}
+
+.menu-wrapper {
+  background: var(--white);
+  border-radius: 2rem;
+  box-shadow: 0 0 8px rgb(20, 66, 89);
+  border: 2px solid var(--baseitblue);
+}
+
+.links {
+  text-decoration: none;
+}
+
+.menu-icons {
+  width: 28px;
+  color: var(--baseitblue);
+  font-size: 27px;
+  text-shadow: none;
+}
+.menu-item {
+  transition: all 0.3s ease-in-out;
+  padding: 1rem 3rem;
+  border-radius: 3rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  color: var(--black);
+  text-shadow: 0 0 1px var(--black);
+  align-items: center;
+}
+.menu-item:hover {
+  transition: all 0.3s ease-in-out;
+  background: rgba(200, 206, 213, 0.5);
+}
+.menu-item[aria-current=page] {
+  background: rgba(56, 151, 200, 0.4);
+}
+
+/*    CONTACT PAGE    */
+#contactTitleWrapper,
+.contact-form-wrapper,
+#submitButton,
+#contactForm,
+.send-button-wrapper,
+#envelope,
+.outer-contact-message-wrapper {
+  display: flex;
+}
+
+.outer-contact-message-wrapper,
+.contact-form-wrapper,
+.contact-box-wrapper {
+  margin: 2rem;
+}
+
+#contactTitleWrapper {
+  justify-content: center;
+}
+
+#contactTitle {
+  text-transform: uppercase;
+  text-shadow: 0 0 5px var(--baseitblue);
+}
+
+.outer-contact-message-wrapper {
+  justify-content: center;
+  height: 300px;
+  display: grid;
+}
+
+.contact-message-wrapper {
+  font-size: 1.3rem;
+  text-align: center;
+  line-height: 2rem;
+  height: 300px;
+  width: 900px;
+}
+
+.baseitElectrical {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--baseitblue);
+}
+
+.open-hours-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.opening-hours-box {
+  background: var(--white);
+  width: 290px;
+  padding: 0.4rem;
+}
+
+.opening-hours-box-wrapper {
+  filter: drop-shadow(-1px 6px 3px rgb(41, 109, 143));
+}
+
+#opening-hours-box-1 {
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+}
+
+#opening-hours-box-2 {
+  clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+  -webkit-clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+}
+
+#opening-hours-box-3 {
+  clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
+  -webkit-clip-path: 10% 0, 100% 0, 100% 100%, 0 100%;
+}
+
+.opening-days,
+.opening-times {
+  font-weight: bold;
+}
+
+.opening-days {
+  text-shadow: 1px 1px 2px var(--baseitblue);
+  color: var(--baseitblue);
+}
+
+.contact-form-wrapper {
+  width: 600px;
+  align-content: center;
+}
+
+#envelope {
+  justify-content: center;
+  font-size: 3rem;
+  color: var(--baseitblue);
+}
+
+.contact-form {
+  background: var(--white);
+  border-radius: 1rem;
+  box-shadow: 0 0 12px;
+  padding: 0.3rem;
+  border: 2px solid var(--baseitblue);
+}
+
+#contactForm {
+  flex-direction: column;
+}
+
+.information {
+  margin: 1rem 1rem 0rem 1rem;
+  text-align: center;
+  line-height: 35px;
+  height: 35px;
+  display: inline-block;
+}
+
+.upload {
+  line-height: 25px;
+  margin: 0;
+}
+
+.contact-labels {
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+  margin-right: 1rem;
+}
+
+.form-input {
+  float: right;
+  width: 300px;
+  border-radius: 0.2rem;
+  box-shadow: 0 0 6px 2px var(--baseitblue);
+  padding: 0.5rem;
+  background: rgba(200, 206, 213, 0.2);
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  font-family: var(--fontfamily-BIZ);
+  border: none;
+}
+
+.form-input:focus {
+  outline: none;
+  box-shadow: 0 0 6px 2px var(--black);
+  transition: all 0.3s ease-in-out;
+}
+
+.message {
+  height: 150px;
+}
+
+#uploadLabel {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: var(--baseitblue);
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  margin: 0 auto;
+  font-weight: 900;
+  font-size: 1.2rem;
+  border: 2px solid var(--baseitblue);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 12px var(--baseitblue);
+}
+
+#uploadLabel:hover {
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  box-shadow: 0 0 12px var(--lightyellow);
+  background: var(--baseitblue);
+  color: var(--white);
+  text-shadow: 0 0 12px var(--black);
+}
+
+#cloudUploadIcon {
+  font-size: 1.8rem;
+}
+
+.upload-none {
+  display: none;
+}
+
+.send-button-wrapper {
+  justify-content: end;
+}
+
+#submitButton {
+  border: 2px solid var(--baseitblue);
+  width: 200px;
+  margin: 2rem 1rem 1rem;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
+  background: rgba(56, 151, 200, 0.5);
+  color: white;
+  text-shadow: 0 0 4px var(--black);
+  transition: all 0.3s ease-in-out;
+}
+
+.bx-mail-send {
+  font-size: 1.4rem;
+}
+
+#submitButton:hover {
+  background: none;
+  text-shadow: none;
+  color: var(--baseitblue);
+  box-shadow: 0 0 12px var(--baseitblue);
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-box-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 200px;
+}
+
+.contact-box {
+  background: var(--white);
+  margin: 1rem;
+  padding: 1rem;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+  width: 220px;
+  height: 220px;
+  box-shadow: 0 0 12px var(--black);
+  border-radius: 1rem;
+}
+
+.contact-icon {
+  color: var(--baseitblue);
+  font-size: 4rem;
+}
+
+.contact-info {
+  font-size: 1rem;
+  position: relative;
+  bottom: 10px;
+}
+
+.box-button {
+  background: var(--baseitblue);
+  border-radius: 0.2rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--black);
+  color: var(--white);
+  transition: all 0.3s ease-in-out;
+}
+
+.box-button:hover {
+  border-radius: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+/*          MEDIA QUERIES           */
+/*    HEADER BAR    */
+@media only screen and (max-width: 1250px) {
+  .opening-hours-today,
+.opening-hours-link {
+    font-size: 0.9rem;
+  }
+  #clockIcon {
+    width: 40px;
+  }
+}
+@media only screen and (max-width: 1080px) {
+  .opening-hours-wrapper {
+    left: 20px;
+  }
+  #instagramLogo {
+    width: 35px;
+  }
+  #facebookLogo {
+    width: 40px;
+  }
+}
+@media only screen and (max-width: 1022px) {
+  .opening-hours-wrapper,
+.social-media-wrapper {
+    display: none;
+  }
+}
+/*    MENU BAR    */
+@media only screen and (max-width: 1440px) {
+  .menu-item {
+    padding: 1rem 2rem;
+  }
+}
+@media only screen and (max-width: 1240px) {
+  .menu-item {
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+}
+@media only screen and (max-width: 1020px) {
+  .menu-item {
+    font-size: 1rem;
+  }
+  .menu-icons {
+    bottom: 4px;
+    width: 24px;
+  }
+}
+/*    MINI MENU BAR    */
+@media only screen and (min-width: 900px) {
+  #toggleMenu,
+.mini-menu-wrapper {
+    display: none;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .outer-menu-wrapper {
+    display: none;
+  }
+  #miniMenuBar,
+#miniMenuBarList,
+.mini-menu-wrapper {
+    display: flex;
+  }
+  .mini-menu-wrapper {
+    justify-content: center;
+    margin: 1rem;
+  }
+  .toggle-menu {
+    padding: 0.5rem 6rem;
+    font-size: 1.1rem;
+    font-family: var(--fontfamily-BIZ);
+    font-weight: bold;
+    background: var(--white);
+    border: 2px solid var(--baseitblue);
+    border-radius: 0.8rem;
+    position: absolute;
+  }
+  .rotated {
+    transform: rotate(90deg);
+  }
+  md-icon {
+    display: inline-block;
+    transition: all 1s;
+    position: absolute;
+    left: 30px;
+    bottom: 5px;
+    filter: drop-shadow(0px 0px 2px var(--baseitblue));
+  }
+  #miniMenuBarList {
+    flex-direction: column;
+    position: relative;
+    top: 50px;
+  }
+  .mini-menu-links {
+    display: flex;
+    justify-content: center;
+    padding: 0.3rem 3rem;
+    background: var(--white);
+    margin: 2px;
+    border: 2px solid var(--baseitblue);
+    border-radius: 0.6rem;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+  }
+}/*# sourceMappingURL=styles.css.map */
