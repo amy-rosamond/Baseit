@@ -6,7 +6,6 @@
     --yellow: rgb(251, 251, 114);
     --lightyellow: rgb(244, 244, 158);
     --darkestblue: rgb(11, 31, 69);
-    --darkblue: rgb(0, 57, 162);
     --white: rgb(255, 255, 255);
     --black: rgb(0, 0, 0);
     --fontfamily-BIZ: 'BIZ UDPMincho', serif;
@@ -37,6 +36,7 @@ footer {
     margin: 0 auto;
     width: min(100% - 4rem, 350px);
     padding-bottom: 5px;
+    filter: drop-shadow(6px 6px 8px #ddd);
 }
 
 .outer-header-wrapper {
@@ -78,6 +78,7 @@ footer {
     width: 50px;
     height: auto;
     margin: 6px 6px 0 0;
+    filter: drop-shadow(3px 3px 2px #a8a6a6);
 }
 
 .social-media {
@@ -92,14 +93,12 @@ footer {
     }
 }
 
-#instagramLogo {
-    width: 45px;
+#instagramLogo img,
+#facebookLogo img {
+    filter: drop-shadow(3px 3px 2px #a8a6a6);
 }
 
-#facebookLogo {
-    width: 50px;
-}
-
+/*    FOOTER      */
 
 
 /*    MENU BAR    */
@@ -151,7 +150,7 @@ footer {
     &-item:hover {
         transition: all .3s ease-in-out;
         background: rgba(200, 206, 213, 0.5);
-    }    
+    }
 
     &-item[aria-current="page"] {
         background: rgba(56, 151, 200, 0.4);
@@ -167,28 +166,35 @@ footer {
 #contactForm,
 .send-button-wrapper,
 #envelope,
-.outer-contact-message-wrapper {
+.outer-contact-message-wrapper,
+.table-wrapper {
     display: flex;
 }
 
-.outer-contact-message-wrapper,
-.contact-form-wrapper,
-.contact-box-wrapper {
-    margin: 2rem;
+.table-wrapper {
+    justify-content: center;
+    flex-direction: column;
 }
 
-#contactTitleWrapper {
-    justify-content: center;
+.outer-contact-message-wrapper,
+.contact-box-wrapper {
+    margin: 0rem 2rem 0rem 1rem;
 }
 
 #contactTitle {
+    &Wrapper {
+        justify-content: center;
+        margin-top: 1rem;
+        height: 60px;
+    }
+
     text-transform: uppercase;
     text-shadow: 0 0 5px var(--baseitblue);
+    font-size: 3rem;
 }
 
 .outer-contact-message-wrapper {
     justify-content: center;
-    height: 300px;
     display: grid;
 }
 
@@ -196,8 +202,7 @@ footer {
     font-size: 1.3rem;
     text-align: center;
     line-height: 2rem;
-    height: 300px;
-    width: 900px;
+    width: 1000px;
 }
 
 .baseitElectrical {
@@ -212,13 +217,13 @@ footer {
 }
 
 .opening-hours-box {
+    &-wrapper {
+        filter: drop-shadow(-1px 6px 3px rgb(41, 109, 143));
+    }
+
     background: var(--white);
     width: 290px;
     padding: 0.4rem;
-}
-
-.opening-hours-box-wrapper {
-    filter: drop-shadow(-1px 6px 3px rgb(41, 109, 143));
 }
 
 #opening-hours-box-1 {
@@ -236,44 +241,63 @@ footer {
     -webkit-clip-path: (10% 0, 100% 0, 100% 100%, 0 100%);
 }
 
-.opening-days,
-.opening-times {
-    font-weight: bold;
-}
+.opening {
 
-.opening-days {
-    text-shadow: 1px 1px 2px var(--baseitblue);
-    color: var(--baseitblue);
-}
+    &-days,
+    &-times {
+        font-weight: bold;
+    }
 
-.contact-form-wrapper {
-    width: 600px;
-    align-content: center;
-}
-
-#envelope {
-    justify-content: center;
-    font-size: 3rem;
-    color: var(--baseitblue);
+    &-days {
+        text-shadow: 1px 1px 2px var(--baseitblue);
+        color: var(--baseitblue);
+    }
 }
 
 .contact-form {
+    &-wrapper {
+        align-content: center;
+        margin: 0rem 0 0.5rem;
+    }
+
     background: var(--white);
     border-radius: 1rem;
     box-shadow: 0 0 12px;
     padding: 0.3rem;
     border: 2px solid var(--baseitblue);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
 }
 
 #contactForm {
     flex-direction: column;
 }
 
+.bx-envelope {
+    font-size: 3rem;
+    text-shadow: 0 0 8px var(--baseitblue);
+    color: var(--darkestblue);
+}
+
+#envelope {
+    font-size: 2rem;
+    color: var(--baseitblue);
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0.5rem;
+}
+
+.free {
+    font-size: 2.2rem;
+}
+
 .information {
     margin: 1rem 1rem 0rem 1rem;
     text-align: center;
-    line-height: 35px;
-    height: 35px;
+    height: 60px;
     display: inline-block;
 }
 
@@ -290,8 +314,7 @@ footer {
 }
 
 .form-input {
-    float: right;
-    width: 300px;
+    width: 350px;
     border-radius: 0.2rem;
     box-shadow: 0 0 6px 2px var(--baseitblue);
     padding: 0.5rem;
@@ -300,12 +323,13 @@ footer {
     transition: all .3s ease-in-out;
     font-family: var(--fontfamily-BIZ);
     border: none;
-}
+    margin: 1rem;
 
-.form-input:focus {
-    outline: none;
-    box-shadow: 0 0 6px 2px var(--black);
-    transition: all .3s ease-in-out;
+    &:focus {
+        outline: none;
+        box-shadow: 0 0 6px 2px var(--black);
+        transition: all .3s ease-in-out;
+    }
 }
 
 .message {
@@ -321,23 +345,22 @@ footer {
     justify-content: center;
     align-items: center;
     width: 300px;
-    margin: 0 auto;
+    margin: 1.5rem auto;
     font-weight: 900;
     font-size: 1.2rem;
     border: 2px solid var(--baseitblue);
     transition: all .3s ease-in-out;
     box-shadow: 0 0 12px var(--baseitblue);
-}
 
-#uploadLabel:hover {
-    transition: all .3s ease-in-out;
-    cursor: pointer;
-    box-shadow: 0 0 12px var(--lightyellow);
-    background: var(--baseitblue);
-    color: var(--white);
-    text-shadow: 0 0 12px var(--black);
+    &:hover {
+        transition: all .3s ease-in-out;
+        cursor: pointer;
+        box-shadow: 0 0 12px var(--lightyellow);
+        background: var(--baseitblue);
+        color: var(--white);
+        text-shadow: 0 0 12px var(--black);
+    }
 }
-
 
 #cloudUploadIcon {
     font-size: 1.8rem;
@@ -367,27 +390,27 @@ footer {
     color: white;
     text-shadow: 0 0 4px var(--black);
     transition: all .3s ease-in-out;
+
+    &:hover {
+        background: none;
+        text-shadow: none;
+        color: var(--baseitblue);
+        box-shadow: 0 0 12px var(--baseitblue);
+        transition: all .3s ease-in-out;
+    }
 }
 
 .bx-mail-send {
     font-size: 1.4rem;
 }
 
-#submitButton:hover {
-    background: none;
-    text-shadow: none;
-    color: var(--baseitblue);
-    box-shadow: 0 0 12px var(--baseitblue);
-    transition: all .3s ease-in-out;
-}
-
-.contact-box-wrapper {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    height: 200px;
-}
-
 .contact-box {
+    &-wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        height: 200px;
+    }
+
     background: var(--white);
     margin: 1rem;
     padding: 1rem;
@@ -397,7 +420,7 @@ footer {
     text-align: center;
     font-size: 1.1rem;
     font-weight: bold;
-    width: 220px;
+    width: 250px;
     height: 220px;
     box-shadow: 0 0 12px var(--black);
     border-radius: 1rem;
@@ -414,6 +437,7 @@ footer {
     bottom: 10px;
 }
 
+
 .box-button {
     background: var(--baseitblue);
     border-radius: 0.2rem;
@@ -421,13 +445,111 @@ footer {
     border: 2px solid var(--black);
     color: var(--white);
     transition: all .3s ease-in-out;
+
+    &:hover {
+        border-radius: 1rem;
+        transition: all .3s ease-in-out;
+    }
 }
 
-.box-button:hover {
-    border-radius: 1rem;
-    transition: all .3s ease-in-out;
+// end of contact page
+
+//  projects page
+
+.body-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
+.heading-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+    width: 60%;
+    border-bottom: 3px solid var(--baseitblue);
+    border-radius: 5px;
+
+    h1 {
+        color: #000;
+        text-shadow: 2px 2px 2px var(--baseitblue);
+        margin-bottom: 6px;
+    }
+}
+
+.images {
+    &-wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    &-border {
+        max-width: 300px;
+        width: 100%;
+        border-radius: 0.8rem;
+        display: flex;
+        background: linear-gradient(-45deg, var(--baseitblue), var(--baseitblue), rgb(185, 225, 245), var(--baseitblue), var(--baseitblue));
+        background-size: 400% 400%;
+        animation: gradient 3s infinite;
+        transition: all .5s;
+
+        div {
+            margin: 7px;
+            display: flex;
+
+            img {
+                width: 100%;
+                border-radius: 0.4rem;
+                transition: all .3s ease;
+            }
+        }
+    }
+}
+
+// for javascript flip card function
+
+.card-hover {
+    transform: rotateY(180deg);
+    transition: all .5s;
+}
+
+.card-back {
+    position: absolute;
+    transform: rotateY(-180deg);
+    display: flex;
+    transition: all .2s ease-in-out;
+
+    &-text-hide {
+        opacity: 0;
+        transition: opcacity .5s ease-in-out;
+    }
+
+    &-hide {
+        opacity: 0;
+        transition: all .5s ease-in-out;
+    }
+
+    &-show {
+        opacity: 1;
+        transition: all .5s ease-in-out;
+    }
+}
+
+// ANIMATIONS
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
 
 
 /*          MEDIA QUERIES           */
