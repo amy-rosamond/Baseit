@@ -18,3 +18,9 @@ function cardNoHover() {
     cardImg.classList.remove('.card-back-hide');
     cardTxt.classList.add('.card-back-text-hide');
 }
+
+$('#upload').bind('change', function () {
+    var fileName = '';
+    fileName = $(this).val();
+    $('#file-selected').html(fileName);
+});

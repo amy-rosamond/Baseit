@@ -1,0 +1,47 @@
+.container {
+    &-full-width {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0px;
+        padding: 10px 30px;
+
+        &-row {
+            flex-direction: row;
+        }
+
+        &-white {
+            background-color: var(--white);
+        }
+
+        &-gradient {
+            background-image: linear-gradient(160deg, var(--background), var(--background), var(--baseitblue));
+        }
+    }
+
+    &-contact {
+        display: flex;
+        flex-direction: row;
+        padding-right: 0px;
+    }
+}
+
+@media only screen and (max-width: 1360px) {
+    .container {
+        &-contact {
+            padding: 10px 30px;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        &-full-width {
+            padding: 10px 10px;
+        }
+
+        &-contact {
+            padding: 10px 10px;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+@use '../config/colours' as *;
+
+@mixin light-text-shadow {
+    text-shadow: 3px 0px 6px rgba(0,0,0,0.2);
+}
+
+@mixin light-drop-shadow {
+    filter: drop-shadow(2px 1px 1px rgba(0,0,0,0.2)) ;
+}
+
+@mixin baseit-text-shadow {
+    text-shadow: 3px 0px 6px var(--baseitblue);
+}
+
+@mixin flex-column-align {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+@mixin transition-style {
+    transition: all .3s ease-in-out;
+}
