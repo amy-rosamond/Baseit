@@ -1,0 +1,85 @@
+@use '../config/colours' as *;
+@use '../config/mixins' as *;
+
+@media only screen and (min-width: 900px) {
+
+    #toggleMenu,
+    .mini-menu-wrapper {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .menu {
+        display: none;
+
+        &-container {
+            margin: 1rem 1rem 3rem;
+        }
+    }
+
+    #miniMenuBar,
+    #miniMenuBarList {
+        display: flex;
+        width: 100%;
+    }
+
+    .mini-menu {
+        &-wrapper {
+            display: flex;
+            justify-content: center;
+            margin: 1rem;
+            max-width: 260px;
+            width: 100%;
+        }
+
+        &-toggle {
+            padding: 0.5rem 6rem;
+            font-size: 1.2rem;
+            color: var(--baseitblue);
+            text-transform: uppercase;
+            font-family: var(--fontfamily-BIZ);
+            font-weight: bolder;
+            background: var(--white);
+            border: 2px solid var(--baseitblue);
+            border-radius: 0.4rem;
+            position: absolute;
+            box-shadow: 0 0 3px #555;
+            letter-spacing: 2px;
+        }
+
+        &-links {
+            display: flex;
+            justify-content: center;
+            padding: 0.5rem;
+            background: var(--white);
+            margin: 5px 0px;
+            border: 2px solid var(--baseitblue);
+            border-radius: 0.4rem;
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+    }
+
+    #miniMenuBarList {
+        flex-direction: column;
+        position: relative;
+        top: 50px;
+    }
+
+    .rotated {
+        transform: rotate(90deg);
+    }
+
+    md-icon {
+        display: inline-block;
+        transition: all 1s;
+        position: absolute;
+        left: 30px;
+        bottom: 5px;
+        filter: drop-shadow(1px 1px 1px #ddd);
+    }
+}
+

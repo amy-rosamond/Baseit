@@ -102,7 +102,7 @@
     min-width: 212px;
     width: 100%;
     height: 220px;
-    box-shadow: 0 0 12px var(--black);
+    box-shadow: 0 0 7px #555;
     border-radius: .8rem;
 
     &-info {
@@ -143,6 +143,20 @@
         margin: 2rem 0 2rem 1rem;
     }
 
+    background: var(--white);
+    border-radius: 1rem;
+    box-shadow: 0 0 7px #555;
+    padding: 0.3rem;
+    border: 2px solid var(--baseitblue);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-right: 0px solid var(--baseitblue);
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    height: 650px;
+    justify-content: space-evenly;
+
     &-envelope {
         font-size: 1.6rem;
         color: var(--baseitblue);
@@ -164,20 +178,6 @@
             font-size: 1.8rem;
         }
     }
-
-    background: var(--white);
-    border-radius: 1rem;
-    box-shadow: 0 0 12px;
-    padding: 0.3rem;
-    border: 2px solid var(--baseitblue);
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    border-right: 0px solid var(--baseitblue);
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
-    height: 650px;
-    justify-content: space-evenly;
 
     &-input {
         @include flex-column-align;
@@ -231,10 +231,10 @@
                 &:hover {
                     @include transition-style;
                     cursor: pointer;
-                    box-shadow: 0 0 12px var(--lightyellow);
+                    box-shadow: 0 0 6px 1px #ddd;
                     background: var(--baseitblue);
                     color: var(--white);
-                    text-shadow: 0 0 12px var(--black);
+                    @include light-text-shadow;
                 }
 
                 &:focus-within {
@@ -271,7 +271,7 @@
                 align-items: center;
                 background: var(--baseitblue);
                 color: white;
-                box-shadow: 0 0 4px 1px #ddd;
+                box-shadow: 0 0 6px 0px #ddd;
                 @include light-text-shadow;
                 @include transition-style;
 
@@ -281,6 +281,12 @@
                     color: var(--baseitblue);
                     box-shadow: 0 0 7px var(--baseitblue);
                     @include transition-style;
+                    transform: scale(1.05);
+                }
+
+                i {
+                    font-size: 1.4rem;
+                    margin-left: 5px;
                 }
             }
         }
@@ -295,13 +301,14 @@
     justify-content: end;
 }
 
-
-.bx-mail-send {
-    font-size: 1.4rem;
-}
-
 @media only screen and (max-width: 1360px) {
     .contact-form-wrapper {
-        display:none;
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .contact-box-wrapper {
+        flex-wrap: wrap;
     }
 }

@@ -1,0 +1,71 @@
+@use '../config/colours' as *;
+@use '../config/mixins' as *;
+
+.menu {
+    &-container {
+        display: flex;
+        justify-content: center;
+        margin: 2rem 1rem;
+    }
+
+    display: flex;
+    background: var(--white);
+    border-radius: 2rem;
+    box-shadow: 0 0 8px rgb(20, 66, 89);
+    border: 2px solid var(--baseitblue);
+
+    &-item {
+        display: flex;
+        transition: all .3s ease-in-out;
+        padding: 1rem 3rem;
+        border-radius: 3rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        color: var(--black);
+        text-shadow: 0 0 1px var(--black);
+        align-items: center;
+
+        &:hover {
+            transition: all .3s ease-in-out;
+            background: rgba(200, 206, 213, 0.5);
+        }
+
+        i {
+            margin-right: 3px;
+            width: 28px;
+            color: var(--baseitblue);
+            font-size: 27px;
+            text-shadow: none;
+        }
+    }
+
+    &-item[aria-current="page"] {
+        background: rgba(56, 151, 200, 0.4);
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    .menu-item {
+        padding: 1rem 2rem;
+    }
+}
+
+@media only screen and (max-width: 1240px) {
+    .menu-item {
+        padding: 1rem;
+        font-size: 1.1rem;
+    }
+}
+
+@media only screen and (max-width: 1020px) {
+    .menu-item {
+        font-size: 1rem;
+    }
+
+    .menu-icons {
+        bottom: 4px;
+        width: 24px;
+    }
+}

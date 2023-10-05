@@ -15,83 +15,74 @@
 </head>
 
 <body>
-    <header id="header">
-        <div class="outer-header-wrapper">
-            <div class="header-wrapper">
-                <div class="opening-hours-wrapper">
-                    <div class="opening-hours-icon">
-                        <img src="images/icons/clock.png" alt="Clock" id="clockIcon">
-                    </div>
-                    <div class="opening-hours">
-                        <div class="opening-hours-today">Open Until 5pm</div>
-                        <div class="opening-hours"><a href="" class="opening-hours-link">Opening Hours</a></div>
-                    </div>
+    <header>
+        <div class="header-container">
+            <div class="header-opening-hours-wrapper">
+                <div class="header-opening-hours-icon">
+                    <img src="images/icons/clock.png" alt="Clock" id="clockIcon">
                 </div>
-                <div class="logo-wrapper">
-                    <a href="index.html"><img src="images/logos/BaseitLogo-removebg.png" alt="Baseit Logo"
-                            id="baseitLogo" /></a>
+                <div class="header-opening-hours">
+                    <div class="header-opening-hours-today">Open Until 5pm</div>
+                    <div class="header-opening-hours"><a href="" class="opening-hours-link">Opening Hours</a></div>
                 </div>
-                <div class="social-media-wrapper">
-                    <div id="instagramLogo" class="social-media-svgs"><a
-                            href="https://instagram.com/baseitelectrical?igshid=YmMyMTA2M2Y=" target="_blank">
-                            <img src="images/Icons/instagram.png" width="45px">
-                        </a>
-                    </div>
+            </div>
+            <div class="header-logo">
+                <a href="index.html"><img src="images/logos/BaseitLogo-removebg.png" alt="Baseit Logo" /></a>
+            </div>
+            <div class="header-social-media">
+                <div id="instagramLogo" class="social-media-svgs"><a
+                        href="https://instagram.com/baseitelectrical?igshid=YmMyMTA2M2Y=" target="_blank">
+                        <img src="images/Icons/instagram.png" width="45px">
+                    </a>
+                </div>
 
-                    <div id="facebookLogo" class="social-media-svgs"><a
-                            href="https://www.facebook.com/BaseitElectrical/" target="_blank">
-                            <img src="images/Icons/facebook.png" width="45px">
-                        </a>
-                    </div>
+                <div id="facebookLogo" class="social-media-svgs"><a href="https://www.facebook.com/BaseitElectrical/"
+                        target="_blank">
+                        <img src="images/Icons/facebook.png" width="45px">
+                    </a>
                 </div>
             </div>
         </div>
 
-        <div class="outer-menu-wrapper">
-            <div class="menu-wrapper">
-                <nav id="menuBar">
-                    <a href="index.html" class="links"><span class="menu-item"><span class="menu-icons"><i
-                                    class='bx bx-home'></i></span>Home</span></a>
+        <div class="menu-container">
+            <nav class="menu" id="menuBar">
+                <a href="index.html" class="menu-item"><i class='bx bx-home'></i>Home</a>
 
-                    <a href="services.html" class="links"><span class="menu-item"><span class="menu-icons"><i
-                                    class='bx bx-bulb'></i></span>Services</span></a>
+                <a href="services.html" class="menu-item"><i class='bx bx-bulb'></i>Services</a>
 
-                    <a href="reviews.html" class="links"><span class="menu-item"><span class="menu-icons"><i
-                                    class='bx bx-star'></i></span>Reviews</span></a>
+                <a href="reviews.html" class="menu-item"><i class='bx bx-star'></i>Reviews</a>
 
-                    <a href="projects.html" class="links"><span class="menu-item"><span class="menu-icons"><i
-                                    class='bx bxs-book'></i></span>Projects</span></a>
+                <a href="projects.html" class="menu-item"><i class='bx bxs-book'></i>Projects</a>
 
-                    <a href="contact.html" class="links"><span class="menu-item" aria-current="page"><span
-                                class="menu-icons"><i class='bx bx-phone-call'></i></span>Contact</span></a>
+                <a href="contact.html" class="menu-item" aria-current="page"><i class='bx bx-phone-call'></i>Contact</a>
+            </nav>
+
+
+            <!--     MINI MENU BAR DROPDOWN     -->
+
+            <div class="mini-menu-wrapper">
+                <button id="toggleMenu" class="mini-menu-toggle">
+                    <md-icon md-svg-icon='assets/svg/down-arrow.svg'>
+                        <?xml version="1.0" encoding="iso-8859-1" ?>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+                            style="fill: rgba(56, 151, 200, 1);transform:msFilter;">
+                            <path d="m13.061 4.939-2.122 2.122L15.879 12l-4.94 4.939 2.122 2.122L20.121 12z"></path>
+                            <path d="M6.061 19.061 13.121 12l-7.06-7.061-2.122 2.122L8.879 12l-4.94 4.939z"></path>
+                        </svg>
+                    </md-icon>
+                    Menu
+                </button>
+                <nav id="miniMenuBar">
+                    <div id="miniMenuBarList">
+                        <a href="index.html" class="mini-menu-links"><span class="mini-menu-item">Home</span></a>
+                        <a href="services.html" class="mini-menu-links"><span class="mini-menu-item">Services</span></a>
+                        <a href="reviews.html" class="mini-menu-links"><span class="mini-menu-item">Reviews</span></a>
+                        <a href="projects.html" class="mini-menu-links"><span class="mini-menu-item">Projects</span></a>
+                        <a href="contact.html" class="mini-menu-links"><span class="mini-menu-item"
+                                aria-current="page">Contact</span></a>
+                    </div>
                 </nav>
             </div>
-        </div>
-
-        <!--     MINI MENU BAR DROPDOWN     -->
-
-        <div class="mini-menu-wrapper">
-            <button id="toggleMenu" class="toggle-menu">
-                <md-icon md-svg-icon='assets/svg/down-arrow.svg'>
-                    <?xml version="1.0" encoding="iso-8859-1" ?>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
-                        style="fill: rgba(0, 0, 0, 1);transform:msFilter;">
-                        <path d="m13.061 4.939-2.122 2.122L15.879 12l-4.94 4.939 2.122 2.122L20.121 12z"></path>
-                        <path d="M6.061 19.061 13.121 12l-7.06-7.061-2.122 2.122L8.879 12l-4.94 4.939z"></path>
-                    </svg>
-                </md-icon>
-                Menu
-            </button>
-            <nav id="miniMenuBar">
-                <div id="miniMenuBarList">
-                    <a href="index.html" class="mini-menu-links"><span class="mini-menu-item">Home</span></a>
-                    <a href="services.html" class="mini-menu-links"><span class="mini-menu-item">Services</span></a>
-                    <a href="reviews.html" class="mini-menu-links"><span class="mini-menu-item">Reviews</span></a>
-                    <a href="projects.html" class="mini-menu-links"><span class="mini-menu-item">Projects</span></a>
-                    <a href="contact.html" class="mini-menu-links"><span class="mini-menu-item"
-                            aria-current="page">Contact</span></a>
-                </div>
-            </nav>
         </div>
     </header>
 
@@ -107,9 +98,10 @@
             <div class="open-hours-container">
                 <div class="open-hours-message">
                     <p>
-                        Looking for highly qualified, reliably, and friendly electricians? Then <span
+                        Looking for highly qualified, reliable, and friendly electricians? Then <span
                             class="baseit-electrical">Baseit Electrical</span> has got you covered. With over 7 years in
-                        the business, gathering experience in a wide variety of fields, we have exactly what it takes, to take on your job.
+                        the business, gathering experience in a wide variety of fields, we have exactly what it takes,
+                        to take on your job.
                     </p>
                 </div>
 

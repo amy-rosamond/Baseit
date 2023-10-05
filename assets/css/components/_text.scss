@@ -1,5 +1,17 @@
 @use '../config/mixins' as *;
 
+* {
+    box-sizing: border-box;
+}
+
+html,
+header,
+body,
+footer {
+    background-color: var(--background);
+    font-family: var(--fontfamily-BIZ);
+}
+
 .page-heading {
     display: flex;
     justify-content: center;

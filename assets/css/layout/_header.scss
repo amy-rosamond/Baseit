@@ -1,0 +1,111 @@
+@use '../config/colours' as *;
+@use '../config/mixins' as *;
+
+.header {
+    &-container {
+        display: flex;
+        border: 3px solid var(--baseitblue);
+        border-top: 0px solid var(--baseitblue);
+        background-color: var(--white);
+        border-bottom-left-radius: 1.5rem;
+        border-bottom-right-radius: 1.5rem;
+        box-shadow: 0 0 7px #555;
+        width: 85%;
+        margin-inline: auto;
+    }
+
+    &-logo {
+        img {
+            display: flex;
+            margin: 0 auto;
+            width: min(100% - 4rem, 350px);
+            padding-bottom: 5px;
+            filter: drop-shadow(2px 2px 2px #ddd);
+        }
+    }
+
+    &-opening-hours {
+        &-wrapper {
+            display: flex;
+            flex-direction: row;
+            width: min(100% - 4rem, 350px);
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            left: 50px;
+        }
+
+        &-today,
+        &-link {
+            letter-spacing: 0.5px;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        &-today {
+            line-height: 25px;
+        }
+
+        &-link {
+            color: var(--baseitblue);
+        }
+
+        &-icon {
+            img {
+                width: 50px;
+                height: auto;
+                margin: 6px 6px 0 0;
+                filter: drop-shadow(1px 1px 2px #a8a6a6);
+            }
+        }
+    }
+
+    &-social-media {
+        display: flex;
+        width: min(100% - 4rem, 350px);
+        align-items: center;
+        justify-content: center;
+
+        div {
+            margin: 1rem;
+
+            img {
+                filter: drop-shadow(1px 1px 2px #a8a6a6);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+
+    .header-opening-hours-today,
+    .header-opening-hours-link {
+        font-size: 0.9rem;
+    }
+
+    #clockIcon {
+        width: 40px;
+    }
+}
+
+@media only screen and (max-width: 1080px) {
+    .header-opening-hours-wrapper {
+        left: 20px;
+    }
+
+    #instagramLogo {
+        width: 35px;
+    }
+
+    #facebookLogo {
+        width: 40px;
+    }
+}
+
+@media only screen and (max-width: 1022px) {
+
+    .header-opening-hours-wrapper,
+    .header-social-media {
+        display: none;
+    }
+}
